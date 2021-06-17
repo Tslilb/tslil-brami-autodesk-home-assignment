@@ -1,0 +1,32 @@
+{
+  "name": "autodesk-home-ass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tslilb/Autodesk-Home-Ass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tslilb/Autodesk-Home-Ass/issues"
+  },
+  "homepage": "https://github.com/Tslilb/Autodesk-Home-Ass#readme",
+  "dependencies": {
+    "adal-node": "^0.2.2",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "client-sessions": "^0.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "os-utils": "0.0.14",
+    "uuid": "^8.3.2",
+    "xpath": "0.0.32"
+  }
+}
