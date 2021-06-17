@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 80
-CMD [ "node", ".project/main.js"]
+CMD [ "node", "project/main.js"]
