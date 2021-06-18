@@ -30,8 +30,8 @@ function getHealthDetails() {
     return {
         OS_name: OS_name,
         Platform_version: vers,
-        //Memory_usage:presantageUsedMemory,
-        CPU_usage:getCPUusage(),
+        Memory_usage:presantageUsedMemory,
+        //CPU_usage:getCPUusage(),
     };
 }
 
