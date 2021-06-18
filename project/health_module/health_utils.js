@@ -1,19 +1,21 @@
+
+
 function getHealthDetails() {
 
     const vers = process.version;
     const OS_name = process.platform;
-    // var os= require('os-utils');
+    //const os = require('os');
+
     // const cpu=os.cpuUsage();
-    // const total_mem=os.freememPercentage();
-    // const usedMemory = os.usedmem();
-    // const freeMemory = os.freemem();
+    const usedMemory = process.memoryUsage().heapUsed / 1024 / 1024;
+    const presantageUsedMemory=Math.round(usedMemory*100)/100;
 
     return {
-        //OS_name: OS_name,
+        OS_name: OS_name,
         Platform_version: vers,
-        // Memory_usage:usedMemory,
+        Memory_usage:presantageUsedMemory,
         // CPU_usage:freeMemory,
     };
 }
-// getHealthDetails();
+getHealthDetails();
 exports.getHealthDetails = getHealthDetails;
