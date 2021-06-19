@@ -6,7 +6,7 @@ Prequsities-
 
 
 API documantion-
-https://virtserver.swaggerhub.com/Tslilb/tslil-brami-autodesk-home-assignment/1.0.0
+https://app.swaggerhub.com/apis/Tslilb/tslil-brami-autodesk-home-assignment/1.0.0
 
 Live API link on Heroku-
 
