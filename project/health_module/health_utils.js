@@ -1,24 +1,29 @@
 var os = require('os');
 
+
+
+
+
 function getCPUusage(){
     var cpus = os.cpus();
+    var arr=[];
 
-    for(var i = 0, len = cpus.length; i < len; i++) {
-        console.log("CPU %s:", i);
+    cpus.forEach((cpu,i) => {
+        
         var cpu = cpus[i], total = 0;
-    
+        const core={core:i};
+
         for(var type in cpu.times) {
             total += cpu.times[type];
+            var presantage=Math.round(100 * cpu.times[type] / total);
+            core[type]=`${presantage}%`; 
         }
-    
-        for(type in cpu.times) {
-            console.log("\t", type, Math.round(100 * cpu.times[type] / total));
-        }
-    }
+        
+        arr.push(core);
+    }) 
 
+    return arr;
 };
-
-
 
 function getHealthDetails() {
 
@@ -26,13 +31,15 @@ function getHealthDetails() {
     const OS_name = process.platform;
     const usedMemory = process.memoryUsage().heapUsed / 1024 / 1024;
     const presantageUsedMemory=Math.round(usedMemory*100)/100;
+    var cpus = os.cpus();
 
     return {
         OS_name: OS_name,
         Platform_version: vers,
         Memory_usage:presantageUsedMemory,
-        //CPU_usage:getCPUusage(),
+        cpu_usage:getCPUusage(),
+    
     };
 }
-
+//getCPUusage();
 exports.getHealthDetails = getHealthDetails;
