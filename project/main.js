@@ -1,6 +1,4 @@
 require('dotenv').config();
-var http=require('http');
-// var server=http.Server(app);
 const twitter_api = require("./twitter_module/twitter_api");
 const health = require("./health_module/health");
 var express = require("express");
@@ -11,11 +9,6 @@ var router = express.Router();
 var port = process.env.PORT || "80";
 
 app.use(express.static('client'));
-
-// server.listen(port,function(){
-//   console.log(`server is listening on port ${port}`);
-// });
-
 
 const rout = router.get("/", (req, res) => res.send("Welcome to Tslil's app"));
 app.use(rout);
