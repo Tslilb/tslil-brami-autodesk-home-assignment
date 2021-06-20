@@ -7,7 +7,7 @@ https://app.swaggerhub.com/apis/Tslilb/tslil-brami-autodesk-home-assignment/1.0.
 ###### If you would like to run my service locally with Docker- 
 
 >1. Generate token to Twitter API docomntation on [Twitter API](https://developer.twitter.com/en/docs/apps/overview.)
->2. Create .env file, and in it creat TWITTER_TOKEN environment variable to set to your twitter    token.
+>2. Create .env file, and in it create TWITTER_TOKEN environment variable to set to your twitter    token.
 >3. build docker image with this command : 
      ```docker build . -t image-name ```
 >4. run docker image with this command :

@@ -11,8 +11,8 @@ function getCPUusage() {
 
         for (var type in cpu.times) {
             total += cpu.times[type];
-            var presantage = Math.round(100 * cpu.times[type] / total);
-            core[type] = `${presantage}%`;
+            var percentage = Math.round(100 * cpu.times[type] / total);
+            core[type] = `${percentage}%`;
         }
 
         arr.push(core);
@@ -26,13 +26,13 @@ function getHealthDetails() {
     const vers = process.version;
     const OS_name = process.platform;
     const usedMemory = process.memoryUsage().heapUsed / 1024 / 1024;
-    const presantageUsedMemory = Math.round(usedMemory * 100) / 100;
+    const percentageUsedMemory = Math.round(usedMemory * 100) / 100;
     
 
     return {
         OS_name: OS_name,
         Platform_version: vers,
-        Memory_usage: `${presantageUsedMemory}%`,
+        Memory_usage: `${percentageUsedMemory}%`,
         cpu_usage: getCPUusage(),
 
     };
